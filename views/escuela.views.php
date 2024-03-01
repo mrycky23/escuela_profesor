@@ -3,112 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css"> 
     <title>Formulario</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        form {
-            background-color: #fff;
-            width: 400px;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2, h3 {
-            color: #333;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #555;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-        .custom-button {
-            background-color: #4CAF50; /* Color de fondo */
-            border: none; /* Sin borde */
-            color: white; /* Color del texto */
-            padding: 10px 20px; /* Espaciado interno */
-            text-align: center; /* Alineación del texto */
-            text-decoration: none; /* Sin subrayado */
-            display: inline-block; /* Mostrar como un bloque en línea */
-            font-size: 16px; /* Tamaño de fuente */
-            cursor: pointer; /* Cursor al pasar el ratón */
-            border-radius: 4px; /* Borde redondeado */
-            transition: background-color 0.3s; /* Transición suave del color de fondo */
-        }
-
-        .custom-button:hover {
-            background-color: #45a049; /* Color de fondo al pasar el ratón */
-        }
-        table {
-            width: 50%;
-            border-collapse: collapse;
-            margin: 20px auto;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+   
 </head>
 <body>
-    <form action="procesar_formulario.php" method="post">
+    <form action="../controllers/escuela.controllers.php" method="post" id="form_escuela">
         <h2>Ingresar datos de la Escuela</h2>
         <div>
             <h3>Datos de Escuela</h3>
             <!--<label for="id_escuela">ID Escuela:</label>
             <input type="text" id="id_escuela" name="id_escuela" required>-->
-
+            <div class="form-group"> 
             <label for="nombre_escuela">Nombre:</label>
             <input type="text" id="nombre_escuela" name="nombre_escuela" required>
+            </div>
+            
 
+            <div class="form-group"> 
             <label for="direccion_escuela">Dirección:</label>
             <input type="text" id="direccion_escuela" name="direccion_escuela" required>
+            </div>
+            
 
+            <div class="form-group"> 
             <label for="telefono_escuela">Teléfono:</label>
-            <input type="text" id="telefono_escuela" name="telefono_escuela" required>
+            <input type="text" id="telefono_escuela" name="telefono_escuela" required>    
+            </div>
+            
 
+            <div class="form-group"> 
             <label for="num_estudiantes">Número de Estudiantes:</label>
-            <input type="text" id="num_estudiantes" name="num_estudiantes" required>
+            <input type="text" id="num_estudiantes" name="num_estudiantes" required>    
+            </div>
+            
 
-            <input type="submit" value="Enviar">
+            <div class="form-group"> 
+            <input type="submit" value="Enviar">    
+            </div>
+            
             
         </div>
         
     </form>
+    <button id="mostrarEscuelas">Mostrar Escuelas</button>
     <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover">
    
@@ -150,5 +89,6 @@
     </table>
 </div>
 </div>
+<script src="../scripts/escuela.js"></script>
 </body>
 </html>

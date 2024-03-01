@@ -1,4 +1,5 @@
 <?php
+require_once('../config/conexion.php');
 class EscuelaProfesor {
     private $conexion;
 
