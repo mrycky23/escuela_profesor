@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Formulario</title>
     <style>
         body {
@@ -82,29 +83,93 @@
         th {
             background-color: #f2f2f2;
         }
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            font-size: 16px;
+            width: 200px; /* ajusta el ancho según sea necesario */
+            display: block; /* Cambia a bloque para que aparezca en su propia línea */
+            margin-bottom: 10px; /* Añade un margen inferior para separarlo del siguiente elemento */
+        }
+
+        /* Estilo para las opciones dentro del select */
+        select option {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        /* Estilo para el cuadro desplegable del select */
+        select::-ms-expand {
+            display: none;
+        }
+
+        /* Estilo para el div que sigue al select */
+        .form-group {
+            display: block; /* Asegúrate de que cada div aparezca en su propia línea */
+            margin-bottom: 10px; /* Añade un margen inferior para separarlos */
+        }
+
     </style>
 </head>
 <body>
-    <form action="procesar_formulario.php" method="post">
+    <form action="../controllers/profesor.controllers.php" id="form_profesor" method="post">
         <div>
             <h3>Datos de Profesor</h3>
-            <label for="id_profesor">ID Profesor:</label>
-            <input type="text" id="id_profesor" name="id_profesor" required>
-
+            
+            <div class="form-group">
             <label for="nombre_profesor">Nombre:</label>
             <input type="text" id="nombre_profesor" name="nombre_profesor" required>
+            </div>
 
+
+            <div class="form-group">
             <label for="asignatura">Asignatura:</label>
             <input type="text" id="asignatura" name="asignatura" required>
-
+            </div>
+            
+            <div class="form-group">
             <label for="horario">Horario:</label>
             <input type="text" id="horario" name="horario" required>
+            </div>
 
+            <div class= "form-group">
             <label for="anio_ingreso">Año de Ingreso:</label>
             <input type="text" id="anio_ingreso" name="anio_ingreso" required>
+            </div>
+<!--
+            <div class= "form-group"> 
+            <label for="id_profesor">Escuela</label>
+            <select type="text" id="id_profesor" name="id_profesor" select>
+            </div>
+        -->
         </div>
         <input type="submit" value="Enviar">
     </form>
+
+    <script>
+        // Agregar un controlador de eventos para el evento submit del formulario
+        document.getElementById('form_profesor').addEventListener('submit', function(event) {
+            // Evitar que el formulario se envíe automáticamente
+            event.preventDefault();
+
+            // Obtener los valores de los campos del formulario
+            var nombreProfesor = document.getElementById('nombre_profesor').value;
+            var asignatura = document.getElementById('asignatura').value;
+            var horario = document.getElementById('horario').value;
+            var anio = document.getElementById('anio_ingreso').value;
+            // Obtener otros valores de campos de formulario de manera similar
+            
+            // Imprimir los valores en la consola
+            console.log('Nombre del profesor:', nombreProfesor);
+            console.log('Nombre del asignatura:', asignatura);
+            console.log('Nombre del horario:', horario);
+            console.log('Nombre del anio:', anio);
+            // Imprimir otros valores de campos de formulario de manera similar
+        });
+    </script>
+
     <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover">
     <tr>
@@ -137,5 +202,6 @@
 
     </table>
 </div>
+    <script src="../scripts/profesor.js"></script>
 </body>
 </html>

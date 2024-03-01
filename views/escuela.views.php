@@ -89,8 +89,8 @@
         <h2>Ingresar datos de la Escuela</h2>
         <div>
             <h3>Datos de Escuela</h3>
-            <label for="id_escuela">ID Escuela:</label>
-            <input type="text" id="id_escuela" name="id_escuela" required>
+            <!--<label for="id_escuela">ID Escuela:</label>
+            <input type="text" id="id_escuela" name="id_escuela" required>-->
 
             <label for="nombre_escuela">Nombre:</label>
             <input type="text" id="nombre_escuela" name="nombre_escuela" required>
