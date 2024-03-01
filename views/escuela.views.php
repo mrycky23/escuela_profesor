@@ -126,7 +126,7 @@
         <th>Número de Estudiantes</th>
         <th>Profesores</th>
     </tr>
-    <?php if ($escuelas): ?>
+    <?php if ($escuela): ?>
     <?php foreach ($escuelas as $escuela): ?>
         <tr>
             <td><?php echo $escuela['id_escuela']; ?></td>
