@@ -52,7 +52,7 @@
         <th>Horario</th>
         <th>Año ingreso</th>
     </tr>
-    <?php if ($profesores): ?>
+    <?php if (isset($profesores)&& !empty($profesores)): ?>
     <?php foreach ($profesores as $profesor): ?>
         <tr>
             <td><?php echo $profesor['id_profesor']; ?></td>

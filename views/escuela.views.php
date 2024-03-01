@@ -50,13 +50,6 @@
     <button id="mostrarEscuelas">Mostrar Escuelas</button>
     <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover">
-   
-    
-   
-        <!-- Resto del código para mostrar los datos de la escuela -->
-    
-
-
     <tr>
         <th>ID Escuela</th>
         <th>Nombre Escuela</th>
@@ -65,7 +58,7 @@
         <th>Número de Estudiantes</th>
         <th>Profesores</th>
     </tr>
-    <?php if ($escuela): ?>
+    <?php if (isset($escuelas) && !empty($escuelas)): ?>
     <?php foreach ($escuelas as $escuela): ?>
         <tr>
             <td><?php echo $escuela['id_escuela']; ?></td>
@@ -79,12 +72,13 @@
                 <?php endforeach; ?>
             </td>
         </tr>
-        <?php endforeach; ?>
-    <?php else: ?>
+    <?php endforeach; ?>
+<?php else: ?>
     <tr>
         <td colspan="6"><p>No hay escuelas disponibles.</p></td>
     </tr>
-    <?php endif; ?>
+<?php endif; ?>
+
 
     </table>
 </div>
