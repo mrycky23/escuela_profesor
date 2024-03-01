@@ -41,5 +41,23 @@ formulario.addEventListener('submit', function(event) {
     xhr.send(formData);
 });
 
+$(document).ready(function() {
+    $('#mostrarProfesores').click(function() {
+        $.ajax({
+            url: '../controllers/profesor.controllers.php', // Ruta al controlador de profesores
+            type: 'GET', // Tipo de solicitud HTTP
+            data: { action: 'mostrarTodosLosProfesores' }, // Datos adicionales si es necesario
+            success: function(response) {
+                // Manejar la respuesta del servidor aquí
+                console.log(response);
+            },
+            error: function(xhr, status, error) {
+                // Manejar errores de la solicitud aquí
+                console.error("Error en la solicitud AJAX:", status);
+            }
+        });
+    });
+});
+
 });
 

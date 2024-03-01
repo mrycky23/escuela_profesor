@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <title>Formulario</title>
     <style>
         body {
@@ -146,30 +147,9 @@
         -->
         </div>
         <input type="submit" value="Enviar">
+        
     </form>
-
-    <script>
-        // Agregar un controlador de eventos para el evento submit del formulario
-        document.getElementById('form_profesor').addEventListener('submit', function(event) {
-            // Evitar que el formulario se envíe automáticamente
-            event.preventDefault();
-
-            // Obtener los valores de los campos del formulario
-            var nombreProfesor = document.getElementById('nombre_profesor').value;
-            var asignatura = document.getElementById('asignatura').value;
-            var horario = document.getElementById('horario').value;
-            var anio = document.getElementById('anio_ingreso').value;
-            // Obtener otros valores de campos de formulario de manera similar
-            
-            // Imprimir los valores en la consola
-            console.log('Nombre del profesor:', nombreProfesor);
-            console.log('Nombre del asignatura:', asignatura);
-            console.log('Nombre del horario:', horario);
-            console.log('Nombre del anio:', anio);
-            // Imprimir otros valores de campos de formulario de manera similar
-        });
-    </script>
-
+    <button id="mostrarProfesores">Mostrar Profesores</button>
     <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover">
     <tr>
